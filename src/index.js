@@ -40,3 +40,42 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+const h1 = document.querySelector("h1");
+const navLinks = document.querySelectorAll("nav a");
+const button = document.querySelector("button");
+const h4 = document.querySelectorAll("h4");
+const textContentP = document.querySelectorAll(".text-content p");
+const contactP = document.querySelectorAll(".contact p");
+const copyright = document.querySelector("footer a");
+
+h1.textContent = siteContent.cta.h1;
+
+navLinks.forEach(link => link.className = "italic");
+navLinks[0].textContent = siteContent.nav["nav-item-1"];
+navLinks[1].textContent = siteContent.nav["nav-item-2"];
+navLinks[2].textContent = siteContent.nav["nav-item-3"];
+navLinks[3].textContent = siteContent.nav["nav-item-4"];
+navLinks[4].textContent = siteContent.nav["nav-item-5"];
+navLinks[5].textContent = siteContent.nav["nav-item-6"];
+
+button.textContent = siteContent.cta.button;
+
+h4[0].textContent = siteContent["main-content"]["features-h4"];
+h4[1].textContent = siteContent["main-content"]["about-h4"];
+h4[2].textContent = siteContent["main-content"]["services-h4"];
+h4[3].textContent = siteContent["main-content"]["product-h4"];
+h4[4].textContent = siteContent["main-content"]["vision-h4"];
+h4[5].textContent = siteContent["contact"]["contact-h4"];
+
+textContentP[0].textContent = siteContent["main-content"]["features-content"];
+textContentP[1].textContent = siteContent["main-content"]["about-content"];
+textContentP[2].textContent = siteContent["main-content"]["services-content"];
+textContentP[3].textContent = siteContent["main-content"]["product-content"];
+textContentP[4].textContent = siteContent["main-content"]["vision-content"];
+
+contactP[0].textContent = siteContent["contact"].address;
+contactP[1].textContent = siteContent["contact"].phone;
+contactP[2].textContent = siteContent["contact"].email;
+
+copyright.textContent = siteContent.footer.copyright;
