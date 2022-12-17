@@ -1,3 +1,5 @@
+const { logRoles } = require("@testing-library/dom");
+
 const siteContent = { // DO NOT CHANGE THIS OBJECT
   "nav": {
     "nav-item-1": "Services",
@@ -39,7 +41,7 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+console.log('project wired!');
 
 const h1 = document.querySelector("h1");
 const navLinks = document.querySelectorAll("nav a");
@@ -48,6 +50,9 @@ const h4 = document.querySelectorAll("h4");
 const textContentP = document.querySelectorAll(".text-content p");
 const contactP = document.querySelectorAll(".contact p");
 const copyright = document.querySelector("footer a");
+const logo = document.querySelector("header img");
+const ctaImg = document.querySelector(".cta img");
+const accentImg = document.querySelector("#middle-img");
 
 h1.textContent = siteContent.cta.h1;
 
@@ -79,3 +84,8 @@ contactP[1].textContent = siteContent["contact"].phone;
 contactP[2].textContent = siteContent["contact"].email;
 
 copyright.textContent = siteContent.footer.copyright;
+copyright.className = "bold";
+
+logo.src = siteContent.images["logo-img"];
+ctaImg.src = siteContent.images["cta-img"];
+accentImg.src = siteContent.images["accent-img"];
